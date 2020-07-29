@@ -17,5 +17,8 @@ async function getData() {
         .then((res) => res.json())
         .then((res) => {
             console.log(res);
+            show.innerHTML = 'Show:  ' + res[0].anime;
+            quote.innerHTML = 'Quote:   ' + res[0].quote;
+            author.innerHTML = 'Character:  ' + res[0].character;
         });
 }
