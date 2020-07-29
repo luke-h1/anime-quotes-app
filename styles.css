@@ -1,0 +1,24 @@
+* { 
+    padding: 0 ; 
+    margin: 0 ; 
+}
+
+
+.search { 
+    margin-top: 6rem ; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.row { 
+    margin-top: 8rem ; 
+    display: flex ; 
+    justify-content: center;
+}
+
+
+.author { 
+    color: red ; 
+}

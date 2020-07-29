@@ -1,4 +1,4 @@
-const API_URL = 'https://anime-chan.herokuapp.com/api/quotes';
+const API_URL = 'https://anime-chan.herokuapp.com/api/quotes/random';
 const button = document.querySelector('.btn');
 const card = document.querySelector('.card');
 
