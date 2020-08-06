@@ -1,0 +1,22 @@
+{
+  "name": "anime-quotes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luke-h1/anime-quotes-app.git"
+  },
+  "author": "luke-h1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luke-h1/anime-quotes-app/issues"
+  },
+  "homepage": "https://github.com/luke-h1/anime-quotes-app#readme",
+  "dependencies": {
+    "next": "^9.5.1"
+  }
+}
