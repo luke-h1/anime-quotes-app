@@ -20,9 +20,9 @@ async function getData() {
             .then((res) => res.json())
             .then((res) => {
                 console.log(res);
-                show.innerHTML = 'Show:  ' + res[0].anime;
-                quote.innerHTML = 'Quote:   ' + res[0].quote;
-                author.innerHTML = 'Character:  ' + res[0].character;
+                show.innerHTML = `Show ${res[0].anime}`; 
+                quote.innerHTML = `Show ${res[0].quote}`; 
+                author.innerHTML = `Show ${res[0].character}`
                 let end = new Date().getTime(); 
                 let time = end - start; 
                 console.log('Execution time: ' + time + 'miliseconds')                
