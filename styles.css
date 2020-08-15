@@ -32,5 +32,9 @@
 .card-title { 
     font-weight: 800 ; 
     line-height: 1.6 ;  
+    color: blue;
 
+}
+.show { 
+    color: red; 
 }
