@@ -5,11 +5,12 @@ const button = document.querySelector('.btn');
 const card = document.querySelector('.card');
 
 // results from API variables
-
 const show = document.querySelector('.card-title'); //output where the series / show will go
 const quote = document.querySelector('.card-text'); // output where the quote will go
 const author = document.querySelector('.author'); // output where character will go (span)
 
+
+// EVENT LISTENERS
 button.addEventListener('click', getData);
 
 
