@@ -5,3 +5,6 @@
 /api/quotes?anime=<anime-name> : query quotes by the name of the anime
 
 /api/quotes?char=<character-name> : query quotes by a anime character name
+
+
+API_URL: https://animechanapi.xyz/api/quotes/random 
