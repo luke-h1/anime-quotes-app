@@ -3,8 +3,9 @@ Anime quote app made with vanilla Javascript &amp; bootstrap. Deployed with Verc
 
 
 ## TODO: 
-  * fix styles with cards being displayed weird (use css grid) 
+  * fix styles with cards being displayed weird (use css grid) ✅
   * refactor html 
-  * refactor js 
-  * enable eslint 
+  * refactor js  ✅
+  * enable eslint ✅
+  * fix responsiveness on smaller screens 
   * redeploy to vercel 
