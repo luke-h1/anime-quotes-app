@@ -1,15 +1,13 @@
-/* eslint-disable */
-const searchBtn = document.getElementById('search-btn');
 const searchTerm = document.getElementById('term');
-const errorEl = document.getElementById('error');
+// const errorEl = document.getElementById('error');
 const form = document.getElementById('form-control');
 const quotes = document.getElementById('quotes');
 const imageLoadingEl = document.getElementById('loading');
 const randomQuoteBtn = document.getElementById('random-btn');
 
-function showError(message) {
-  errorEl.innerHTML = message;
-}
+// function showError(message) {
+//   errorEl.innerHTML = message;
+// }
 
 function getAnimeData(e) {
   e.preventDefault(e);
@@ -23,7 +21,7 @@ function getAnimeData(e) {
         .map(
           (anime) => `
         <div class="row">
-        <div class="col s12 m6">
+        <div class="col s2 m12 center">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <span class="card-title">${anime.anime}</span>
@@ -34,7 +32,7 @@ function getAnimeData(e) {
                   </div>
                   </div>
                   </div>
-        `
+        `,
         )
         .join('');
       imageLoadingEl.style.display = 'none';
@@ -43,7 +41,7 @@ function getAnimeData(e) {
 
 function getRandomQuote(e) {
   e.preventDefault();
-  const RANDOM_API_URL = `https://animechanapi.xyz/api/quotes/`;
+  const RANDOM_API_URL = 'https://animechanapi.xyz/api/quotes/';
   imageLoadingEl.style.display = 'block';
   fetch(RANDOM_API_URL)
     .then((res) => res.json())
@@ -51,21 +49,23 @@ function getRandomQuote(e) {
       quotes.innerHTML = '';
       quotes.innerHTML = data.data
         .map(
-          (randomAnime) => `
-        <div class="row">
-        <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">${randomAnime.anime}</span>
-              <p>${randomAnime.quote}</p>
-                <div class="card-action"> 
-                ${randomAnime.character}</a>
-                  </div>
-                  </div>
-                  </div>
-                  </div>
+          (randomAnime) => `  
 
-        `
+        <div class="row">
+        <div class="col s2 m12 center">
+          <div class="card blue-grey ">
+            <div class="card-content white-text">
+              <span class="card-title quote-title">${randomAnime.anime}</span>
+              <p class="quote">${randomAnime.quote}</p>
+                <div class="card-action">  
+                <p class="character">${randomAnime.character}</p> 
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div> 
+
+        `,
         )
         .join('');
       imageLoadingEl.style.display = 'none';

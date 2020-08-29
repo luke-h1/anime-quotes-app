@@ -11,12 +11,13 @@ body {
 }
 
 
-
 .container { 
   display: flex; 
   flex-direction: column;
   align-items: center;
   margin-bottom: 5em;
+  width: 100%; 
+  text-align: center;
 }
 
 .container form { 
@@ -34,6 +35,42 @@ body {
 
 .loading { 
   display: none; 
-  width: 100px;
-  object-fit: cover;
+  width: 300px;
+  object-fit: cover; 
+  margin: 0 auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+}
+
+
+.quote { 
+  color: #fff;
+  font-size: 20px;
+}
+.quote-title { 
+  color: blue;
+}
+.card-char p { 
+  color: red;
+}
+.character { 
+  color: red;
+  font-size: 16px;
+}
+
+.btn-wrapper button { 
+  margin: 0 auto ; 
+  width: 50%;
+  padding: 1rem; 
+  background-color: #1172D6;
+  color: #fff; 
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; 
+  font-size: 16px; 
+  font-family: 'Roboto', sans-serif;
 }
