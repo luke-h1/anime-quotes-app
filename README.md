@@ -5,4 +5,5 @@ Anime quote app made with vanilla Javascript &amp; bootstrap. Deployed with Verc
 
 ## TODO: 
   * rebuild with materialize css 
+  * refactor entire app.js file 
   * add form where the user can search for their favorite anime shows 
