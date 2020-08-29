@@ -32,10 +32,11 @@ function getAnimeData(e) {
                   </div>
                   </div>
                   </div>
-        `,
+        `
         )
         .join('');
       imageLoadingEl.style.display = 'none';
+      console.log(quotes.innerHTML);
     });
 }
 
@@ -65,7 +66,7 @@ function getRandomQuote(e) {
                   </div>
                   </div> 
 
-        `,
+        `
         )
         .join('');
       imageLoadingEl.style.display = 'none';
