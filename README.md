@@ -7,5 +7,6 @@ Anime quote app made with vanilla Javascript &amp; bootstrap. Deployed with Verc
   * refactor html 
   * refactor js  ✅
   * enable eslint ✅
-  * fix responsiveness on smaller screens 
+  * fix responsiveness on smaller screens  
+  * resize fonts 
   * redeploy to vercel 
