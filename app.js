@@ -32,7 +32,7 @@ function getAnimeData(e) {
                   </div>
                   </div>
                   </div>
-        `
+        `,
         )
         .join('');
       imageLoadingEl.style.display = 'none';
@@ -66,7 +66,7 @@ function getRandomQuote(e) {
                   </div>
                   </div> 
 
-        `
+        `,
         )
         .join('');
       imageLoadingEl.style.display = 'none';
