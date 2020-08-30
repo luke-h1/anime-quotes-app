@@ -9,6 +9,11 @@ const randomQuoteBtn = document.getElementById('random-btn');
 //   errorEl.innerHTML = message;
 // }
 
+
+
+
+
+
 function getAnimeData(e) {
   e.preventDefault(e);
   const query = searchTerm.value;

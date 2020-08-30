@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="infinite-styles.css" />
+    <title>Infinite scroll</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper blue-grey">
+        <a href="#" class="brand-logo center"
+          >Anime Quotes App - Infinite scroll & filter quotes</a
+        >
+        <a href="index.html" class="brand-logo">Home</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+      </div>
+    </nav>
+    <div class="container">
+      <form class="form-control" id="form-control">
+        <input
+          type="text"
+          for="show"
+          class="filter"
+          id="filter"
+          placeholder="Filter"
+        />
+        <div class="btn-wrapper"></div>
+      </form>
+    </div>
+
+    <div id="quotes-container"></div> 
+    <div class="loader">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="infinite-scroll.js"></script>
+  </body>
+</html>
