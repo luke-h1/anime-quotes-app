@@ -80,3 +80,9 @@ body {
     font-size: 20px;
 }
 
+
+.nav-item { 
+  font-size: 15px;
+  color: #000; 
+  font-weight: 500;
+}
