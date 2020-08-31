@@ -24,9 +24,10 @@ function getAnimeData(e) {
     .then((data) => {
       quotes.innerHTML = data.data
         .map(
-          (anime) => ` 
+          (anime) => `  
+          <div class="quotes"> 
           <div class="row">
-          <div class="col s2 m12 center">
+          <div class="col s1 m5 center">
             <div class="card blue-grey darken-1">
               <div class="card-content white-text">
                 <span class="card-title">Anime:<br>${anime.anime}</span>
@@ -36,6 +37,7 @@ function getAnimeData(e) {
                   </div>
                       </div>
                           </div>
+                              </div>
                               </div>
         `,
         )
