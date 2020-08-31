@@ -3,8 +3,9 @@ Anime quote app made with vanilla Javascript &amp; bootstrap. Deployed with Verc
 
 
 ## TODO: 
-   * refactor js with async await instead of .then() sytanx 
-  * Implement infinite scroll  
+   * refactor js with async await instead of .then() sytanx ✅
+  * Implement infinite scroll  ✅
   * fix responsiveness on smaller screens  
   * resize fonts 
+  * fix issue with filter 
   * redeploy to vercel 
