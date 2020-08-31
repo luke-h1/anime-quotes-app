@@ -119,3 +119,26 @@ body {
 
   
 }
+
+
+
+.container {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  width: 350px; 
+  margin: 0 auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.style-card { 
+  color: #1172D6; 
+  font-weight: bold;
+}
+
+.char-style { 
+  color: red;
+}

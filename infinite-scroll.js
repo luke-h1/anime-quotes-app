@@ -26,21 +26,20 @@ async function showQuotes() {
   const quoteEl = document.createElement('div');
   quoteEl.innerHTML = quotes.data
     .map(
-      (anime) => `
-  <div class="row">
-  <div class="col s2 m12 center">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">Anime:<br>${anime.anime}</span>
-        <p class="anime-quote">${anime.quote}</p>
-          <div class="card-action white-text"> 
-          Character:<br>${anime.character}
-          </div>
-              </div>
-                  </div>
-                      </div>
+      (anime) => ` 
+      <div class="quotes"> 
+      <div class="container">
+        <h6 class="post-title">${anime.anime}</h6>
+        <p class="post-intro">
+          ${anime.quote}
+        </p> 
+        <br>
+        <hr>
+        <p>${anime.character}}</p>
+      </div>
+      </div> 
   
-  `,
+  `
     )
     .join('');
   quotesContainer.appendChild(quoteEl);
@@ -67,8 +66,14 @@ function filterQuotes(e) {
   items.forEach((item) => {
     const anime = item.querySelector('.card-title').innerText.toUpperCase();
     const quote = item.querySelector('.anime-quote').innerText.toUpperCase();
-    const character = item.querySelector('.card-action').innerText.toUpperCase();
-    if (anime.indexOf(term) > -1 || quote.indexOf(term) > -1 || character.indexOf(term) > -1) {
+    const character = item
+      .querySelector('.card-action')
+      .innerText.toUpperCase();
+    if (
+      anime.indexOf(term) > -1 ||
+      quote.indexOf(term) > -1 ||
+      character.indexOf(term) > -1
+    ) {
       item.style.display = 'flex';
     } else {
       item.style.display = 'none';
