@@ -3,16 +3,8 @@ const searchTerm = document.getElementById('term');
 const form = document.getElementById('form-control');
 const quotes = document.getElementById('quotes');
 const imageLoadingEl = document.getElementById('loading');
-const randomQuoteBtn = document.getElementById('random-btn');
-
-// function showError(message) {
-//   errorEl.innerHTML = message;
-// }
-
-
-
-
-
+const randomQuoteBtn = document.getElementById('random-btn'); 
+const searchbtn = document.getElementById('search-btn');
 
 function getAnimeData(e) {
   e.preventDefault(e);
@@ -77,3 +69,4 @@ function getRandomQuote(e) {
 
 form.addEventListener('submit', getAnimeData);
 randomQuoteBtn.addEventListener('click', getRandomQuote);
+searchbtn.addEventListener('click', getAnimeData);

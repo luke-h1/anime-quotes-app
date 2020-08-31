@@ -15,8 +15,10 @@
   opacity: 0;
   display: flex;
   position: fixed;
-  bottom: 30px;
+  bottom: 50px;
   transition: opacity 0.5s ease-in;
+  margin-left: 35em
+
 }
 
 .loader.show {
@@ -64,6 +66,39 @@
 }
 
 
-.char-style { 
+.style-card {
+  color: #1172d6;
+  font-weight: bold;
+}
+
+.char-style {
   color: red;
+}
+
+
+
+/* MEDIA QUERIES  */
+@media (max-width: 1280px) {
+  .quotes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .quotes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .quotes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .quotes {
+    grid-template-columns: repeat(1, 1fr);
+    width: 50%;
+  }
 }
