@@ -5,7 +5,6 @@ const quotes = document.getElementById('quotes');
 const imageLoadingEl = document.getElementById('loading');
 const randomQuoteBtn = document.getElementById('random-btn');
 const searchbtn = document.getElementById('search-btn');
-
 function showError(message){
   errorEl.innerHTML = message;
   setTimeout(() => { 
@@ -14,40 +13,46 @@ function showError(message){
 }
 
 
-function getAnimeData(e) {
-  e.preventDefault(e);
-  const query = searchTerm.value;
-  const API_URL = `https://animechanapi.xyz/api/quotes?anime=${query}`;
+
+
+
+async function getAnimeData(){ 
+  const query = searchTerm.value; 
+  const API_URL = `https://animechanapi.xyz/api/quotes?anime=${query}` 
+  if (query === ''){
+    showError('Enter a correct value 🤷‍♂️')
+  }else {  
   imageLoadingEl.style.display = 'block';
-  if (query === '') {
-    showError('Enter a correct value');
-    imageLoadingEl.style.display = 'none';
-  } else if (query !== '') {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data) => {
-        quotes.innerHTML = data.data
-          .map(
-            (anime) => `   
-            <div class="quotes"> 
+  const res = await fetch(`${API_URL}`);
+  const data = await res.json(); 
+  console.log(data); 
+  showAnime(data);
+  } 
+}; 
+
+
+function showAnime(data) { 
+  let output = '';
+  data.data.forEach((quote) => {
+    output += `
+    <div class="quotes"> 
               <div class="container">
-                <h6 class="post-title"><span class="style-card">Anime:</span><br>${anime.anime}</h6>
+                <h6 class="post-title"><span class="style-card">Anime:</span><br>${quote.anime}</h6>
                 <p class="post-intro">
-                  <span class="style-card">Quote:</span><br>${anime.quote}
+                  <span class="style-card">Quote:</span><br>${quote.quote}
                 </p> 
                 <br>
                 <hr>
-                <p><span class="style-card">Character:</span> <br><span class="char-style">${anime.character}</span></p>
+                <p><span class="style-card">Character:</span> <br><span class="char-style">${quote.character}</span></p>
           </div>
           </div> 
-        `
-          )
-          .join('');
-        imageLoadingEl.style.display = 'none';
-        console.log(quotes.innerHTML);
-      });
-  }
+    `;
+  })
+  imageLoadingEl.style.display = 'none';
+  quotes.innerHTML = output;
 }
+
+
 
 function getRandomQuote(e) {
   e.preventDefault();
