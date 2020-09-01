@@ -74,6 +74,19 @@
 .char-style {
   color: red;
 }
+li { 
+  list-style-type: none;
+}
+
+.list-container a { 
+  margin-right: 2em;
+} 
+
+.github { 
+  position: absolute;
+  top: 0 ;
+  left: 0;
+}
 
 
 
