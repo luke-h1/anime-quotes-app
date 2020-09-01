@@ -112,6 +112,11 @@ body {
   color: red;
 }
 
+.error { 
+  text-align: center;
+  color: red;
+}
+
 li { 
   list-style-type: none;
 }

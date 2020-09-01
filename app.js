@@ -1,22 +1,34 @@
 const searchTerm = document.getElementById('term');
-// const errorEl = document.getElementById('error');
+const errorEl = document.getElementById('error');
 const form = document.getElementById('form-control');
 const quotes = document.getElementById('quotes');
 const imageLoadingEl = document.getElementById('loading');
-const randomQuoteBtn = document.getElementById('random-btn'); 
+const randomQuoteBtn = document.getElementById('random-btn');
 const searchbtn = document.getElementById('search-btn');
+
+function showError(message){
+  errorEl.innerHTML = message;
+  setTimeout(() => { 
+    errorEl.innerHTML = ''
+  }, 2000)
+}
+
 
 function getAnimeData(e) {
   e.preventDefault(e);
   const query = searchTerm.value;
   const API_URL = `https://animechanapi.xyz/api/quotes?anime=${query}`;
   imageLoadingEl.style.display = 'block';
-  fetch(API_URL)
-    .then((res) => res.json())
-    .then((data) => {
-      quotes.innerHTML = data.data
-        .map( 
-          (anime) => `   
+  if (query === '') {
+    showError('Enter a correct value');
+    imageLoadingEl.style.display = 'none';
+  } else if (query !== '') {
+    fetch(API_URL)
+      .then((res) => res.json())
+      .then((data) => {
+        quotes.innerHTML = data.data
+          .map(
+            (anime) => `   
             <div class="quotes"> 
               <div class="container">
                 <h6 class="post-title"><span class="style-card">Anime:</span><br>${anime.anime}</h6>
@@ -28,12 +40,13 @@ function getAnimeData(e) {
                 <p><span class="style-card">Character:</span> <br><span class="char-style">${anime.character}</span></p>
           </div>
           </div> 
-        `,
-        )
-        .join('');
-      imageLoadingEl.style.display = 'none';
-      console.log(quotes.innerHTML);
-    });
+        `
+          )
+          .join('');
+        imageLoadingEl.style.display = 'none';
+        console.log(quotes.innerHTML);
+      });
+  }
 }
 
 function getRandomQuote(e) {
@@ -58,7 +71,7 @@ function getRandomQuote(e) {
             <p><span class="char-style">Character:</span> <br>${randomAnime.character}</p>
               </div>
               </div> 
-        `,
+        `
         )
         .join('');
       imageLoadingEl.style.display = 'none';
