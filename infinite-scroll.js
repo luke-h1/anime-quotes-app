@@ -38,7 +38,7 @@ async function showQuotes() {
         <p><span class="char-style">Character:</span> <br>${anime.character}}</p>
       </div>
       </div> 
-  
+
   `
     )
     .join('');
